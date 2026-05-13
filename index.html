@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Card Challenge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Contact Card Manager</h1>
+      <p>
+        Add contacts using the form below. Each contact should be stored as an
+        object inside an array, then displayed on the page as a card.
+      </p>
+    </header>
+
+    <section class="panel form-section">
+      <h2>Add Contact</h2>
+
+      <form id="contactForm" novalidate>
+        <label for="nameInput">Name</label>
+        <input id="nameInput" type="text" placeholder="e.g. Sarah Jones" />
+
+        <label for="emailInput">Email</label>
+        <input id="emailInput" type="email" placeholder="e.g. sarah@example.com" />
+
+        <label for="phoneInput">Phone</label>
+        <input id="phoneInput" type="text" placeholder="e.g. 07123456789" />
+
+        <label for="typeInput">Contact type</label>
+        <select id="typeInput">
+          <option value="">Select type</option>
+          <option value="Friend">Friend</option>
+          <option value="Work">Work</option>
+          <option value="Family">Family</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <button type="submit" id="submitBtn">Add Contact</button>
+
+        <p id="errorMessage" class="error-message" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="panel contacts-section">
+      <div class="section-heading">
+        <h2>Contacts</h2>
+        <p id="contactCount">0 contacts</p>
+      </div>
+
+      <div id="contactsList" class="contacts-list">
+        <p class="empty-message">No contacts added yet.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
