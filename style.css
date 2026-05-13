@@ -159,3 +159,6 @@ button:hover {
 .card-para{
   margin: 0;
 }
+.delete-btn{
+  background-color: red;
+}

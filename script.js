@@ -8,7 +8,7 @@ const errorMessage = document.getElementById("errorMessage");
 const contactsList = document.getElementById("contactsList")
 
 // *****************VALIDATION**************
- 
+ let contacts = []
  submitBtn.addEventListener("click", (e) => {
     e.preventDefault()      
     // validate if empty
@@ -81,8 +81,7 @@ const contactsList = document.getElementById("contactsList")
         return
     }
     errorMessage.textContent = "great"
-    let card = {name, email, phone, type}
-    let contacts = []
+    let card = {name, email, phone, type}    
     contacts.push(card)
     
     // ************Card Display **************
@@ -94,11 +93,18 @@ const contactsList = document.getElementById("contactsList")
            let p = document.createElement("p")           
            p.classList.add("card-para")
            p.textContent = position[info] 
-          contactsList.append(p);          
+          contactsList.append(p); 
+                
          }
+         console.log(contactsList)   
         //  making a delete btn
           let deleteBtn = document.createElement("button");
-          contactsList.append(deleteBtn)       
+          deleteBtn.textContent = "Delete";
+          deleteBtn.classList.add("delete-btn");
+          contactsList.append(deleteBtn);
+          deleteBtn.addEventListener("click", () => {
+            
+          })       
     }
  })
  
