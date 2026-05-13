@@ -83,7 +83,7 @@ const contactsList = document.getElementById("contactsList")
     errorMessage.textContent = "great"
     let card = {name, email, phone, type}    
     contacts.push(card)
-    
+    contactsList.innerHTML = ""
     // ************Card Display **************
 //    *********looping through Contact array*******8
     for(let i = 0; i < contacts.length; i++){
@@ -92,7 +92,7 @@ const contactsList = document.getElementById("contactsList")
          for (const info in position) {       
            let p = document.createElement("p")           
            p.classList.add("card-para")
-           p.textContent = position[info] 
+           p.textContent = position[info]                  
           contactsList.append(p); 
                 
          }
