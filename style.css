@@ -156,3 +156,6 @@ button:hover {
     grid-column: span 2;
   }
 }
+.card-para{
+  margin: 0;
+}

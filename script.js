@@ -86,14 +86,19 @@ const contactsList = document.getElementById("contactsList")
     contacts.push(card)
     
     // ************Card Display **************
-   
+//    *********looping through Contact array*******8
     for(let i = 0; i < contacts.length; i++){
-        let position = contacts[i]       
+        let position = contacts[i] 
+            //  looping through card object
          for (const info in position) {       
-           
-           console.log(position[info])
+           let p = document.createElement("p")           
+           p.classList.add("card-para")
+           p.textContent = position[info] 
+          contactsList.append(p);          
          }
-                
+        //  making a delete btn
+          let deleteBtn = document.createElement("button");
+          contactsList.append(deleteBtn)       
     }
  })
  
