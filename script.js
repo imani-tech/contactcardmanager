@@ -84,11 +84,16 @@ const contactsList = document.getElementById("contactsList")
     let card = {name, email, phone, type}
     let contacts = []
     contacts.push(card)
-    console.log(contacts)
+    
     // ************Card Display **************
-    let position = 0;
-    for(let i = 0; i < card.length; i++){
-        
+   
+    for(let i = 0; i < contacts.length; i++){
+        let position = contacts[i]       
+         for (const info in position) {       
+           
+           console.log(position[info])
+         }
+                
     }
  })
  
