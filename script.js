@@ -80,14 +80,15 @@ const contactsList = document.getElementById("contactsList")
     if(!typevalidation()){
         return
     }
-
     errorMessage.textContent = "great"
     let card = {name, email, phone, type}    
-    contacts.push(card)
+    contacts.push(card);
+    displayCard()
+})
+    
 
    function displayCard(){
-    contactsList.innerHTML = ""
-    
+    contactsList.innerHTML = ""    
     // ************Card Display **************
 //    *********looping through Contact array*******8
     for(let i = 0; i < contacts.length; i++){
@@ -112,7 +113,10 @@ const contactsList = document.getElementById("contactsList")
            
           }        
     }
-    displayCard()
-  
- })
+    
+    localStorage.setItem("contactCards", JSON.stringify(contacts))
+    localStorage.getItem("contactCards")
+   
+   
+ 
  
