@@ -80,10 +80,14 @@ const contactsList = document.getElementById("contactsList")
     if(!typevalidation()){
         return
     }
+
     errorMessage.textContent = "great"
     let card = {name, email, phone, type}    
     contacts.push(card)
+
+   function displayCard(){
     contactsList.innerHTML = ""
+    
     // ************Card Display **************
 //    *********looping through Contact array*******8
     for(let i = 0; i < contacts.length; i++){
@@ -94,17 +98,21 @@ const contactsList = document.getElementById("contactsList")
            p.classList.add("card-para")
            p.textContent = position[info]                  
           contactsList.append(p); 
+         }       
                 
-         }
-         console.log(contactsList)   
         //  making a delete btn
           let deleteBtn = document.createElement("button");
           deleteBtn.textContent = "Delete";
           deleteBtn.classList.add("delete-btn");
           contactsList.append(deleteBtn);
           deleteBtn.addEventListener("click", () => {
-            
-          })       
+          contacts.splice(i, 1)   
+          displayCard()      
+          })
+           
+          }        
     }
+    displayCard()
+  
  })
  
