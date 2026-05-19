@@ -5,11 +5,12 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #292929;
+  background: #f0f3fa;
 }
 
 h1 {
-  color: #ffffff;
+  color: #313131;
+  text-align: center;
 }
 
 .app {
@@ -30,7 +31,7 @@ h1 {
 .app-header p {
   max-width: 650px;
   margin: 0;
-  color: #e6f3ff;
+  color: #1e1e1e;
   line-height: 1.6;
 }
 

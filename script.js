@@ -8,7 +8,8 @@ const errorMessage = document.getElementById("errorMessage");
 const contactsList = document.getElementById("contactsList")
 
 // *****************VALIDATION**************
- let contacts = []
+  let contacts = JSON.parse(localStorage.getItem("contactCards")) || [];
+ displayCard();
  submitBtn.addEventListener("click", (e) => {
     e.preventDefault()      
     // validate if empty
@@ -112,10 +113,9 @@ const contactsList = document.getElementById("contactsList")
           })
            
           }        
-    }
-    
+    }    
     localStorage.setItem("contactCards", JSON.stringify(contacts))
-    localStorage.getItem("contactCards")
+   
    
    
  
